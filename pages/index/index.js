@@ -1,4 +1,6 @@
 //index.js
+import config from '../../config/index';
+
 //获取应用实例
 const app = getApp()
 
@@ -16,6 +18,8 @@ Page({
     })
   },
   onLoad: function () {
+    console.log('config', config);
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
